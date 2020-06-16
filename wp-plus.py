@@ -6,7 +6,7 @@ import string
 import time
 import os
 import sys
-os.system("title WARP-PLUS-CLOUDFLARE By ALIILAPRO (version 3.0.0)")
+os.system("title WARP-PLUS-CLOUDFLARE By ALIILAPRO")
 os.system('cls' if os.name == 'nt' else 'clear')
 print('      _______ _      __________________       _______ _______ _______ _______\n'
 '     (  ___  | \     \__   __|__   __( \     (  ___  |  ____ |  ____ |  ___  )\n'
@@ -18,7 +18,7 @@ print('      _______ _      __________________       _______ _______ _______ ___
 '     |/     \(_______|_______|_______(_______//     \|/      |/   \__(_______)\n')
 print ("[+] ABOUT SCRIPT:")
 print ("[-] With this script, you can getting unlimited GB on Warp+.")
-print ("[-] Version: 3.0.0")
+print ("[-] Version: 4.0.0")
 print ("--------")
 print ("[+] THIS SCRIPT CODDED BY ALIILAPRO") 
 print ("[-] SITE: aliilapro.github.io") 
@@ -40,15 +40,15 @@ def digitString(stringLength):
 url = f'https://api.cloudflareclient.com/v0a{digitString(3)}/reg'
 def run():
 	try:
-		install_id = genString(11)
-		body = {"key": "{}=".format(genString(42)),
+		install_id = genString(22)
+		body = {"key": "{}=".format(genString(43)),
 				"install_id": install_id,
 				"fcm_token": "{}:APA91b{}".format(install_id, genString(134)),
 				"referrer": referrer,
 				"warp_enabled": False,
-				"tos": datetime.datetime.now().isoformat()[:-3] + "+07:00",
+				"tos": datetime.datetime.now().isoformat()[:-3] + "+02:00",
 				"type": "Android",
-				"locale": "zh-CN"}
+				"locale": "es_ES"}
 		data = json.dumps(body).encode('utf8')
 		headers = {'Content-Type': 'application/json; charset=UTF-8',
 					'Host': 'api.cloudflareclient.com',
@@ -84,10 +84,10 @@ while True:
 		print("[*] After 18 seconds, a new request will be sent.")
 		time.sleep(18)
 	else:
+		b = b + 1
 		os.system('cls' if os.name == 'nt' else 'clear')
 		print("")
 		print("                  WARP-PLUS-CLOUDFLARE (script)" + " By ALIILAPRO")
 		print("")
 		print("[:(] Error when connecting to server.")
-		print(f"[#] Total: {g} Good {b} Bad")
-		b = b + 1	
+		print(f"[#] Total: {g} Good {b} Bad")	
